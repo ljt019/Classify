@@ -1,4 +1,4 @@
-# Sketch Classifier CLI
+# Classify
 
 This is a command-line tool for classifying sketch images using a pre-trained Vision Transformer (ViT) model.
 
