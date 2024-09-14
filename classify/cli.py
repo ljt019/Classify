@@ -53,7 +53,7 @@ def main():
     parser.add_argument("image_path", help="Path to the image file to classify.")
     args = parser.parse_args()
 
-    model_name = "valentingerard100/vit-base-patch16-224-in21k-finetuned-ViT-sketches"
+    model_name = "kmewhort/resnet34-sketch-classifier"
     model, processor, id2label = load_model_and_config(model_name)
 
     predicted_class, probabilities = predict(args.image_path, model, processor)
@@ -62,7 +62,6 @@ def main():
 
     # Print the main prediction
     print("\n" + "="*50)
-    print(f"🖼️  Image: {args.image_path}")
     print(f"🏷️  Prediction: {colored(predicted_label, 'cyan', attrs=['bold'])}")
     print(f"🔢  Id: {predicted_class}")
     print("="*50 + "\n")
